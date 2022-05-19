@@ -11,13 +11,13 @@ $(".time-block").each(function(){
     
     var rowhour = parseInt($(this).attr("id"))
     if(rowhour<moment().hours()){
-       
+        $(this).addClass("past")
     }
     else if (rowhour===moment().hours()){
-        console.log("present")
+        $(this).addClass("present")
     }
     else {
-        console.log("future")
+        $(this).addClass("future")
     }
 })
 $(".saveBtn").on ("click",function(){
